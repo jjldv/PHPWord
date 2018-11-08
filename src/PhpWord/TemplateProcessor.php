@@ -347,7 +347,7 @@ class TemplateProcessor
         $xmlBlock = $this->_GetInnerBlock($blockname);
         $cloned = array();
         for ($i = 1; $i <= $clones; $i++) {
-            $cloned[] = preg_replace('/\$\{(.*?)\}/', '\${\\1#' . $i . '}', $xmlBlock);
+            $cloned[] = $xmlBlock;
         }
         if ($replace) {
             $this->tempDocumentMainPart = str_replace(
